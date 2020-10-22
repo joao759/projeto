@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="javascript_adaptarvisao.js"></script>
+    <link href="stylesheet_sobre.css" rel="stylesheet">
+    <link href="stylesheet_inicio.css" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/eye1.ico">
+    <title>Casa Aberta · Daltonismo</title>
+</head>
+
+<body>
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z" />
+                    <path fill-rule="evenodd"
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="daltonismo.html">Tipos de daltonismo<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="sobre.html">Nosso Projeto<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Feedback<span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- Lista - DropDown 'Adaptar visão' → imagens alteradas por função javascript -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Adaptar visão
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border: none;">
+                            <button class="dropdown-item nav-link" onclick="alter_ImageNormal();">Normal</button>
+                            <button class="dropdown-item nav-link"
+                                onclick="alter_ImageProtanopia();">Pronatopia</button>
+                            <button class="dropdown-item nav-link"
+                                onclick="alter_ImageDeuteranopia();">Deuteranopia</button>
+                            <button class="dropdown-item nav-link"
+                                onclick="alter_ImageTritanopia();">Tritanopia</button>
+                            <button class="dropdown-item nav-link"
+                                onclick="alter_ImageMonocromia();">Monocromia</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container marketing">
+            <div class="row">
+                <div style="margin-top: 2rem;" class="col md">
+                    <h1>Linguagem de programação</h1>
+                    <p class="lead p_color_dark">
+                        Nosso site utilizou por base a linguagem HTML, que é umas das principais linguagens de
+                        programação para sites e que tivemos por mais fácil manuseio, ainda mais utilizando de recursos
+                        BootsTrap. A parte visual foi utilizado o CSS, que é uma linguagem de estilos para editar o
+                        design do site com cores, sombras e outros. E por último temos o JavaScript, que foi de extrema
+                        importância para termos sucesso em implementar a nossa ferramentar de "adaptar visão". O
+                        JavaScript teve por função realizar as trocas de imagens e cores para o tipo de daltonismo
+                        selecionado. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col md">
+                    <h1 style="margin-top: 2rem;">Ferramentas</h1>
+                    <p class="lead p_color_dark">
+                        Para fazer este site utilizamos de algumas ferramentas e recursos que foram de extrema
+                        importância para nós e fizeram com que a criação da nossa ideia pudesse ser a mais organizada e
+                        funcional possível para todo mundo. No caso destacamos três principais ferramentas que mais
+                        utilizamos. Além disso também vamos destacar alguns outros sites e
+                        extensões que nos ajudaram a ter uma ideia base de como fariamos o projeto. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card background-vscode">
+                        <input type="checkbox" name="">
+                        <div class="toggle">+</div>
+                        <div class="imgBx"><img class="img" src="imagens/icon_vsCode.png"></div>
+                        <div class="details">
+                            <h1>VS Code</h1>
+                            <p>Visual Studio Code é um editor de códigos que possui de diversas extensões e
+                                recursos que ajudam muito na programação. Ele possui controle Git
+                                incorporado (outra ferramenta muito importante para a construção desse projeto),
+                                complementação de código, refatoração de código e vários outros.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card background-bootstrap">
+                        <input type="checkbox" name="">
+                        <div class="toggle">+</div>
+                        <div class="imgBx"><img class="img" style="filter: invert(100%);"
+                                src="imagens/icon_BootsTrap.png">
+                        </div>
+                        <div class="details">
+                            <h1>BootsTrap</h1>
+                            <p>É um framework utilizado para o desenvolvimento de componentes de interface e front-end
+                                (parte frontal do site; que interage com o usuário) que tem por função auxiliar na
+                                criação de sites que sejam mais amigáveis com o usuário e também responsivos (possa se
+                                adequar a quaquer tipo de tela. Parte muito importante de um site).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card background-github">
+                        <input type="checkbox" name="">
+                        <div class="toggle">+</div>
+                        <div class="imgBx"><img class="img" style="filter: invert(100%);" src="imagens/icon_gitHub.png">
+                        </div>
+                        <div class="details">
+                            <h1>GitHub</h1>
+                            <p>O GitHub foi de muito ajuda para que não ocorresse de precisar gastar horas e horas
+                                tentando entender o que foi editado no
+                                código-fonte por um outro colega. O GitHub é uma plataforma de hospedagem
+                                de código-fonte e arquivos com controle de versão que permite
+                                programadores trabalhar em conjunto através de recursos de fácil comunicação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col md">
+                    <h1 style="margin-top: 2rem;">Referências</h1>
+                    <p class="lead p_color_dark">
+                        Para realizar nosso projeto utilizamos de alguns sites e extensões para obter uma boa base. A
+                        partir deles conseguimos produzir conteúdos consistentes sobre o daltonismo, tais como: como
+                        ocorre, qual é a sua incidência, quais são os principais tipos de daltonismo, o que eles afetam,
+                        como veem as cores e dentre outros.</p>
+                    <p class="lead p_color_dark">
+                        Um site que foi de grande utilidade para nós foi o <a
+                            href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a>. Ele é
+                        um simulador de daltonismo em que pode ser inserido uma imagem para simula-la. Utilizamos esse
+                        site com grande regularidade para conseguirmos colocar em funcionamento a nossa ferramenta de
+                        adaptação de visão. Também há extensões do chrome que simulam o daltonismo e são muito
+                        interessantes para experimentar e entender a forma de como funciona a mudança de cores de acordo
+                        com o tipo de daltonismo. Alguns deles caso queira provar: <a
+                            href="https://chrome.google.com/webstore/detail/color-enhancer/ipkjmjaledkapilfdigkgfmpekpfnkih?hl=pt-BR">Color
+                            Enhancer</a>, <a
+                            href="https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb?hl=pt-BR&">Spectrum</a>
+                        e por último <a
+                            href="https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool">Colorblind</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div style="margin-top: 2rem;" class="col md">
+                    <h1>Agradecimentos</h1>
+                    <p class="lead p_color_dark">
+                        Gostaríamos de deixar nossos agradecimentos a todos que visitaram o nosso site e puderam
+                        conhecer o nosso projeto, esperamos que tenham gostado e entendido o nosso objetivo. Seria de
+                        extrema ajuda caso pudessem deixar um <a href="feedback.html">feedback</a> sobre sua experiência
+                        com o nosso site. Também gostaríamos de agradecer a toda escola pela oportunidade de realizar um
+                        projeto desses e aos professores que se esforçaram tanto para se adaptar a essa fase de aulas
+                        online.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; Projeto Casa Aberta • Etec Rodrigues de Abreu • 2º Desenvolvimento de Sistemas</p>
+        </footer>
+    </main>
+
+</body>
+
+</html>

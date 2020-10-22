@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background-vscode {
+    border: none;
+    background: linear-gradient(45deg, #24AADB, #1f649a, #0c4868, #0c2337);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+.background-bootstrap {
+    border: none;
+    background: linear-gradient(45deg, #794bc4, #502a79, #422863, #25183a);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+.background-github {
+    border: none;
+    background: linear-gradient(45deg, #313131, #1f1f1f, #131313, #000000);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+}
+
+.card {
+    position: relative;
+    width: 345px;
+    height: 550px;
+    overflow: hidden;
+}
+
+input, .toggle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    outline: none;
+    z-index: 10;
+}
+
+input {
+    opacity: 0;
+}
+
+.toggle {
+    pointer-events: none;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.5s;
+    text-align: center;
+    line-height: 43px;
+    font-size: 36px;
+    box-shadow: 0 0 0 0px #313131;
+}
+
+input:checked~.toggle {
+    box-shadow: 0 0 0 600px #313131;
+    transform: rotate(225deg);
+}
+
+.imgBx, .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.details {
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 11;
+    pointer-events: none;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+input:checked~.details {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+input:checked~.img {
+    opacity: 0;
+}
+
+.details h1 {
+    margin: 3rem;
+    color: #ffffff !important;
+}
+
+.details p {
+    padding: 0;
+    color: #ffffff;
+    text-align: justify !important;
+    margin-top: 3rem; 
+}
+
+.spacing-divs {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .card {
+        width: 110%;
+        right: 5.5%;
+        border-radius: 0;
+    }
+
+    input:checked~.toggle {
+        box-shadow: 0 0 0 800px #313131;
+        transform: rotate(225deg);
+    }
+}
+
+.marketing p {
+    text-align: justify;
+}
+
+.marketing h1 {
+    color:rgb(29, 28, 28);
+}
+
+.circle-cod {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+}
+
+.circle-cod {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-cod h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff !important;
+    text-shadow: 2px 2px #333;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1190px) {
+    .card {
+        width: 100%;
+        right: 5%;
+        border-radius: 0;
+    }
+
+    input:checked~.toggle {
+        box-shadow: 0 0 0 800px #313131;
+        transform: rotate(225deg);
+    }
+}
+
+    /*  
+          CSS-INICIO
+                        */
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+   
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .marketing h2 {
+    font-weight: 400;
+  }
+  
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+  
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+  
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+  
+  .bg-dark,
+  .dropdown-menu {
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .dropdown-item,
+  .dropdown-item:hover,
+  .dropdown-item:hover {
+    color: white !important;
+    background: none;
+    border: none;
+  }
+  
+  .p_color_dark {
+    color: rgb(18, 17, 17) !important;
+    font-weight: 400;
+  }
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
