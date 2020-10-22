@@ -15,7 +15,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
-  <title>Protanopia · Daltonismo</title>
+  <script src="javascript_Imagem.js"></script>
+  <title>Sobre · Daltonismo</title>
   <link href="album.css" rel="stylesheet">
   <link rel="shortcut icon" href="eye1.ico">
 </head>
@@ -38,13 +39,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index_Carousel.html">Inicio<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="dicromacia.html">Tipos de daltonismo<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tritanopia<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="incluir.html">Feedback<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="quiz.html">Teste<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -52,11 +56,11 @@
               Adaptar visão
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border: none;">
-              <button class="dropdown-item nav-link" onclick="alter_ImageNormal();">Normal</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageProtanopia();">Pronatopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageDeuteranopia();">Deuteranopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageTritanopia();">Tritanopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageMonocromia();">Monocromia</button>
+              <button class="dropdown-item nav-link" onclick="alter_ImagemNormal();">Normal</button>
+              <button class="dropdown-item nav-link" onclick="alter_ImagemProtanopia();">Pronatopia</button>
+              <button class="dropdown-item nav-link" onclick="alter_ImagemDeuteranopia();">Deuteranopia</button>
+              <button class="dropdown-item nav-link" onclick="alter_ImagemTritanopia();">Tritanopia</button>
+              <button class="dropdown-item nav-link" onclick="alter_ImagemMonocromia();">Monocromia</button>
             </div>
           </li>
         </ul>
@@ -97,76 +101,75 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1><b>Dicromacia</b></h1><br>
+  <div class="container marketing">
+    <div class="row featurette">
+      <div class="col-md">
+    <h2 style="color:rgb(29, 28, 28) !important; margin-top: 3rem; margin-bottom: 5rem; text-align: center;" class="featurette-heading2">Sobre o daltonismo</h2>
+  </div>
+  </div>
 
-      <p class="lead text-muted">A dicromacia ocorre quando um tipo de cone não está presente na retina. Podemos sub
-        classificar a dicromacia em três grupos de daltonismo.</p>
-    </div>
-  </section>
-  <div
-    class="d-md-flex flex-md-equal w-95 my-md-3 pl-md-3 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-    <div class="col-md-6 blog-main">
-      <div class="my-3 py-4">
-        <h2>Protanopia</h2>
-        <p class="txt">
+    <div class="row featurette">
+      <div class="col-md">
+    <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Dicromacia</h2>
+    <p id="txtP" class="lead p_color_dark txt">Dicromacia é o estado de ter dois tipos de receptores de cor funcionais, chamados células cone, nos olhos.  Os dicromatas podem combinar com qualquer cor que vejam com uma mistura de não mais do que duas luzes espectrais puras.
+      A dicromacia em humanos é um defeito de visão de cores no qual um dos três mecanismos básicos de cor está ausente ou não está funcionando. É hereditária e ligada ao sexo, afetando predominantemente os homens. A dicromacia ocorre quando um dos pigmentos do cone está faltando e a cor é reduzida a duas dimensões.</p>
+  </div>
+  </div>
+    
+    <div style="margin-top: 2rem;"class="row featurette">
+      <div class="col-md-7">
+        <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Protanopia</h2>
+        <p id="txtD" style="margin-top: 2rem;" class="lead p_color_dark txt">
           A protanopia ocorre quando os cones do tipo L não estão presentes na retina. Esta forma de
           daltonismo faz com que as pessoas sejam menos sensíveis à luz vermelha, dificultando a
           distinção das cores: azul e verde, e vermelho e verde.
           A protanopia é de origem genética, transmitida hereditariamente, provocada por uma
           recombinação dos genes localizados no cromossomo X e por isso ligado ao sexo.</p>
       </div>
-    </div>
-    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="shadow-sm mx-auto">
-        <img style="width: 100%; height: 100%;" src="img5.png">
+      <div class="col-md-5">
+        <img id="image1" src="protanopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
       </div>
     </div>
-  </div>
 
-  <div
-    class="d-md-flex flex-md-equal w-95 my-md-3 pl-md-3 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-    <div class="col-md-6 blog-main">
-      <div class="my-3 py-4">
-        <h2 style="color:rgb(29, 28, 28) !important" class="featurette-heading">Deuteranopia</h2>
-        <p class="txt">
-          A deuteranopia ocorre quando os cones do tipo M não estão presentes na retina. Pessoas com
+      <div style="margin-top: 5rem;" class="row featurette">
+        <div class="col-md-7">
+          <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Deuteranopia</h2>
+          <p id="txtT" style="margin-top: 2rem;" class="lead p_color_dark txt">
+            A deuteranopia ocorre quando os cones do tipo M não estão presentes na retina. Pessoas com
           esta forma de daltonismo possuem dificuldade em distinguir o vermelho do verde, o roxo do
           azul, e alguns tons de cinza. Elas conseguem distinguir de dois a três tons de cores diferentes,
           enquanto alguém com visão normal enxerga sete tons diferentes. A deuteranopia também é congênita,
           sua característica é ligada ao sexo.</p>
+        </div>
+        <div class="col-md-5">
+          <img id="image2" src="deutoranopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
+        </div>
       </div>
-    </div>
-    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="shadow-sm mx-auto">
-        <img style="width: 100%; height: 100%;" src="img5.png">
-      </div>
-    </div>
-  </div>
 
-  <div
-    class="d-md-flex flex-md-equal w-95 my-md-3 pl-md-3 position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-    <div class="col-md-6 blog-main">
-      <div class="my-3 py-4">
-        <h2>Tritanopia</h2>
-        <p class="txt">
-          A tritanopia ocorre quando os cones do tipo S não estão presentes na retina. Pessoas com esta
+        <div style="margin-top: 5rem;" class="row featurette" >
+          <div class="col-md-7">
+            <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Tritanopia</h2>
+            <p style="margin-top: 2rem;" class="lead p_color_dark txt">
+              A tritanopia ocorre quando os cones do tipo S não estão presentes na retina. Pessoas com esta
           forma de daltonismo possuem dificuldade em distinguir o azul do verde, e o amarelo do
           violeta.
           Este tipo de daltonismo atinge cerca de 0,008% da população. Ela atinge tanto homens
           quanto mulheres, devido a tritanopia ocorrer em um cormossomo anomalo, que não pertence ao par sexual de
           cromossomos,
           o que a tona possível de se adquirir durante a vida, porém nestes casos ela pode ser reversível.</p>
-      </div>
-    </div>
-    <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="shadow-sm mx-auto">
-        <img style="width: 100%; height: 100%;" src="img5.png">
-      </div>
-    </div>
-  </div>
+          </div>
+          <div class="col-md-5">
+            <img id="image3" src="tritanopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
+          </div>
 
+  </div>
+  </div>
   <div class="div_container">
     <footer class="container">
       <p class="float-right"><a href="#">Back to top</a></p>
