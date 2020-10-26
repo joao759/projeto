@@ -1,4 +1,6 @@
 function alter_ImageNormal() {
+
+    // Site Início
     document.getElementById("img1_Carousel").src = "imagens/img1_Carousel.png";
     document.getElementById("img2_Carousel").src = "imagens/img2_Carousel.png";
     document.getElementById("img3_Carousel").src = "imagens/img3_Carousel.png";

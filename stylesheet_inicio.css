@@ -1,16 +1,8 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: rgb(29, 28, 28);
 }
-
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
@@ -106,6 +98,7 @@ body {
   color: white !important;
   background: none;
   border: none;
+  outline: none;
 }
 
 .circles {
@@ -116,9 +109,14 @@ body {
   height: 100px;
 }
 
-.p_color_dark {
-  color: rgb(18, 17, 17) !important;
+.marketing p {
+  text-align: justify;
+  color: rgb(12, 11, 11) !important;
   font-weight: 400;
+}
+
+.marketing h1 {
+  color: rgb(29, 28, 28) !important;
 }
 
 .bd-placeholder-img {

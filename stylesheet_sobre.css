@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(29, 28, 28);
 }
 
 .img {
@@ -54,6 +55,8 @@ body {
     width: 345px;
     height: 550px;
     overflow: hidden;
+    border: none;
+    border-radius: 2%;
 }
 
 input, .toggle {
@@ -97,6 +100,7 @@ input:checked~.toggle {
 .details {
     padding: 20px;
     box-sizing: border-box;
+    color: #fff !important;
     z-index: 11;
     pointer-events: none;
     transition: 0.5s;
@@ -151,26 +155,16 @@ input:checked~.img {
     color:rgb(29, 28, 28);
 }
 
-.circle-cod {
-    width: 170px;
-    height: 170px;
-    border-radius: 100%;
+.marketing p {
+    text-align: justify;
+    color: rgb(12, 11, 11) !important;
+    font-weight: 400;
 }
 
-.circle-cod {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.circle-cod h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff !important;
-    text-shadow: 2px 2px #333;
+.row a {
+    color: rgb(29, 28, 28);
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1190px) {
@@ -274,11 +268,6 @@ input:checked~.img {
     color: white !important;
     background: none;
     border: none;
-  }
-  
-  .p_color_dark {
-    color: rgb(18, 17, 17) !important;
-    font-weight: 400;
   }
   
   .bd-placeholder-img {
