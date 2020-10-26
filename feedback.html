@@ -18,7 +18,7 @@
     <script src="javascript_adaptarvisao.js"></script>
     <link href="stylesheet_inicio.css" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/eye1.ico">
-    <title>Casa Aberta · Daltonismo</title>
+    <title>Feedback · Daltonismo</title>
 
     <style>
         .container {
@@ -124,20 +124,20 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="daltonismo.html">Tipos de daltonismo<span
+                        <a class="nav-link" href="dicromacia.html">Tipos de daltonismo<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="sobre.html">Nosso Projeto<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="teste.html">Teste<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="quiz.html">Teste<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="feedback.html">Feedback<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Feedback<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -155,15 +155,15 @@
                   </center>
               </div>
               <div style="padding: 20px; margin-left: 5rem;" class="col">
-                <form>
+                <form method="POST" enctype="multipart/form-data" action="incluir.php">
                     <ul class="flex-outer">
                       <li>
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Insira seu nome aqui">
+                        <input type="text" autocomplete="off" name="nome" id="nome" placeholder="Insira seu nome aqui">
                       </li>
                       <li>
                         <label for="messagem">Mensagem</label>
-                        <textarea rows="6" id="messagem" placeholder="Deixe sua mensagem de feedback"></textarea>
+                        <textarea rows="6" autocomplete="off" name="feedback" id="messagem" placeholder="Deixe sua mensagem de feedback"></textarea>
                       </li>
                       <li>
                         <button type="submit">Submit</button>

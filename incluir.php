@@ -1,112 +1,180 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
-  <title>Protanopia · Daltonismo</title>
-  <link href="album.css" rel="stylesheet">
-  <link rel="shortcut icon" href="eye1.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="javascript_adaptarvisao.js"></script>
+    <link href="stylesheet_inicio.css" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/eye1.ico">
+    <title>Casa Aberta · Daltonismo</title>
+
+    <style>
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container * {
+            box-sizing: border-box;
+        }
+
+        .flex-outer,
+        .flex-inner {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .flex-outer {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flex-outer li,
+        .flex-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .flex-inner {
+            padding: 0 8px;
+            justify-content: space-between;
+        }
+
+        .flex-outer>li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .flex-outer li label,
+        .flex-outer li p {
+            padding: 8px;
+            font-weight: 300;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+
+        .flex-outer>li>label,
+        .flex-outer li p {
+            flex: 1 0 120px;
+            max-width: 220px;
+        }
+
+        .flex-outer>li>label+*,
+        .flex-inner {
+            flex: 1 0 220px;
+        }
+
+        .flex-outer li p {
+            margin: 0;
+        }
+
+        .flex-outer li input:not([type='checkbox']),
+        .flex-outer li textarea {
+            padding: 15px;
+            border: none;
+        }
+
+        .flex-outer li button {
+            margin-left: auto;
+            padding: 8px 16px;
+            border: none;
+            background: #333;
+            color: #f2f2f2;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            border-radius: 2px;
+        }
+
+        .flex-inner li {
+            width: 100px;
+        }
+    </style>
+
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z" />
-          <path fill-rule="evenodd"
-            d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
-        </svg></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="dicromacia.html">Tipos de daltonismo<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Tritanopia<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Adaptar visão
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border: none;">
-              <button class="dropdown-item nav-link" onclick="alter_ImageNormal();">Normal</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageProtanopia();">Pronatopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageDeuteranopia();">Deuteranopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageTritanopia();">Tritanopia</button>
-              <button class="dropdown-item nav-link" onclick="alter_ImageMonocromia();">Monocromia</button>
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.134 13.134 0 0 0 1.66 2.043C4.12 11.332 5.88 12.5 8 12.5c2.12 0 3.879-1.168 5.168-2.457A13.134 13.134 0 0 0 14.828 8a13.133 13.133 0 0 0-1.66-2.043C11.879 4.668 10.119 3.5 8 3.5c-2.12 0-3.879 1.168-5.168 2.457A13.133 13.133 0 0 0 1.172 8z" />
+                    <path fill-rule="evenodd"
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="inicio.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="daltonismo.html">Tipos de daltonismo<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="sobre.html">Nosso Projeto<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="teste.html">Teste<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="feedback.html">Feedback<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-</body>
+        </nav>
+    </header>
+    <!-- Fim da barra de navegação -->
+    <main role="main">
 
-<header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
-          viewBox="0 0 24 24" focusable="false">
-          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-          <circle cx="12" cy="13" r="4" /></svg>
-        <strong>Protanopia</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<body>
-    <center>
-        <br>
-        <h1>Feedback</h1>
-    </center>
-    <?php
+        <div style="margin-top: 4rem ;background: aqua; height: 400px; width: 100%;" class="container">
+            <div class="row">
+              <div class="col">
+                <center>
+                    <h2 style="color:rgb(29, 28, 28) !important; text-align: center;" class="featurette-heading">Feedback</h2><br>
+                    <p class="lead p_color_dark txt">Adoraríamos caso possa deixar uma mensagem sobre sua experiência com o nosso site. </p>
+                  </center>
+              </div>
+              <div style="padding: 20px; margin-left: 5rem;" class="col">
+                <form method="POST" enctype="multipart/form-data" action="incluir.php">
+                    <ul class="flex-outer">
+                      <li>
+                        <label for="nome">Nome</label>
+                        <input type="text" autocomplete="off" name="nome" id="nome" placeholder="Insira seu nome aqui">
+                      </li>
+                      <li>
+                        <label for="messagem">Mensagem</label>
+                        <textarea rows="6" autocomplete="off" name="feedback" id="messagem" placeholder="Deixe sua mensagem de feedback"></textarea>
+                      </li>
+                      <li>
+                        <button type="submit">Submit</button>
+                      </li>
+                    </ul>
+                    <?php
             $nome = $_POST["nome"];
             $feedback = $_POST["feedback"];
                         
 
-            $conect = mysqli_connect("localhost", "root", "", "daltonismo") or die ("Erro!");
+            $conect = mysqli_connect("localhost", "id15190864_usuarioprojeto", "Hugosp@12345", "id15190864_daltonismo") or die ("Erro!");
 
             $insert = "insert into comentario (id, nome, feedback) values(
                 '',
@@ -117,18 +185,17 @@
 
                 $incluir = mysqli_query($conect, $insert);
                 if($incluir == 1){
-                    echo"
-                    Nome: $nome<br>
-                    Feedback: $feedback<br>                    
-                    <hr style='border:solid 1px #000;'>
-                    ";
-                    echo"<p style='color:#0F9D58; font-weight:bold; font-size: 20px'>Feedback enviado com sucesso!<br></p>";
+                    echo "Cadastrado com sucesso!";
                 }
                 else{
-                    echo"Feedback não foi enviado!<br>";
                 }
-                echo"<a href='incluir.html' class='btn btn-dark' role='button'>Voltar</a>";
         ?>
+                  </form>
+              </div>
+            </div>
+          </div>
+
+
 </body>
 
 </html>
