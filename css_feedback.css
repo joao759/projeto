@@ -1,0 +1,166 @@
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron h1 {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.bg-dark,
+.dropdown-menu {
+    background-color: rgb(29, 28, 28) !important;
+}
+
+.dropdown-item,
+.dropdown-item:hover,
+.dropdown-item:hover {
+    color: white !important;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.txt {
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    color: rgb(18, 17, 17) !important;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.p_color_dark {
+    color: rgb(18, 17, 17) !important;
+    font-weight: 400;
+
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+
+.featurette-heading2 {
+    font-size: 65px;
+}
+
+.wrapper {
+    position: flex;
+    width: 80%;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type=submit] {
+    border: 2px solid rgb(29, 28, 28);
+    color: rgb(29, 28, 28);
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    position: relative;
+    margin-left: 10%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    width: 25%;
+    height: 65px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+    border: 2px solid #2196F3;
+    color: #FFF;
+    background: #2196F3;
+}
+
+.wrapper .input-data {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .input-data input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #2196F3;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-data .underline {
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    bottom: 0;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #2196F3;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before {
+    transform: scaleX(2);
+}

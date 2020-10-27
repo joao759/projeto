@@ -4,6 +4,7 @@
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
@@ -34,6 +35,15 @@ footer p {
 
 .bg-dark, .dropdown-menu {
   background-color: rgb(29, 28, 28) !important;
+}
+
+.dropdown-item,
+.dropdown-item:hover,
+.dropdown-item:hover {
+  color: white !important;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .txt {

@@ -1,0 +1,125 @@
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+  
+  .bg-dark, .dropdown-menu {
+    background-color: rgb(29, 28, 28) !important;
+  }
+  
+  .txt {
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    color:rgb(18, 17, 17)!important;
+    font-weight: 400; 
+    text-align: justify;
+  }
+  .p_color_dark {
+    color:rgb(18, 17, 17)!important;
+    font-weight: 400;
+    
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+  .featurette-heading2 {
+    font-size: 65px;
+  }
+  .quiz-title {
+    font-size: x-large!important;
+    font-weight: bold!important;
+  }
+
+  .container-w3 {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #palco p {
+    font-size: 18px;
+  }
+  
+  .container-w3 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(214, 212, 212);
+    border-radius: 50%;
+  }
+  
+  .container-w3:hover input ~ .checkmark {
+    background-color: rgb(160, 160, 160);
+  }
+  
+  .container-w3 input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container-w3 input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-w3 .checkmark:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  

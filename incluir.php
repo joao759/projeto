@@ -145,31 +145,36 @@
     </header>
     <!-- Fim da barra de navegação -->
     <main role="main">
-
-        <div style="margin-top: 4rem ;background: aqua; height: 400px; width: 100%;" class="container">
-            <div class="row">
-              <div class="col">
-                <center>
-                    <h2 style="color:rgb(29, 28, 28) !important; text-align: center;" class="featurette-heading">Feedback</h2><br>
-                    <p class="lead p_color_dark txt">Adoraríamos caso possa deixar uma mensagem sobre sua experiência com o nosso site. </p>
-                  </center>
+      <div style="margin-top: 4rem;" class="container marketing">
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1><b>Feedback</b></h1><br>
+            <p class="lead p_color_dark">Seria de grande ajuda caso pudesse deixar aqui sua mensagem sobre sua
+              experiência com o nosso site. Cite suas principais críticas e conselhos sobre o conteúdo, design e
+              qualquer outra coisa que lhe caiba como importante. Ficaremos extremamente agradecidos e também será de
+              grande ajuda para futuros projetos! <br><label style="font-weight: 600; color: rgb(29, 28, 28);">Agradecemos sua atenção :)</label>
+            </p>
+          </div>
+        </section>
+        <div class="container">
+          <form method="POST" enctype="multipart/form-data" action="incluir.php">
+            <div class="wrapper">
+              <div class="input-data">
+                <input name="nome" type="text" autocomplete="off" required>
+                <div class="underline"></div>
+                <label>Nome</label>
               </div>
-              <div style="padding: 20px; margin-left: 5rem;" class="col">
-                <form method="POST" enctype="multipart/form-data" action="incluir.php">
-                    <ul class="flex-outer">
-                      <li>
-                        <label for="nome">Nome</label>
-                        <input type="text" autocomplete="off" name="nome" id="nome" placeholder="Insira seu nome aqui">
-                      </li>
-                      <li>
-                        <label for="messagem">Mensagem</label>
-                        <textarea rows="6" autocomplete="off" name="feedback" id="messagem" placeholder="Deixe sua mensagem de feedback"></textarea>
-                      </li>
-                      <li>
-                        <button type="submit">Submit</button>
-                      </li>
-                    </ul>
-                    <?php
+            </div>
+            <div style="margin-top: 2rem;" class="wrapper">
+              <div class="input-data">
+                <input type="text" name="feedback" autocomplete="off" required>
+                <div class="underline">
+                </div>
+                <label>Feedback</label>
+              </div>
+            </div>
+            <input type="submit" value="Enviar">
+                        <?php
             $nome = $_POST["nome"];
             $feedback = $_POST["feedback"];
                         
@@ -190,10 +195,15 @@
                 else{
                 }
         ?>
-                  </form>
-              </div>
-            </div>
-          </div>
+          </form>
+        </div>
+        <hr style="margin-top: 4rem;" class="featurette-divider">
+      </div>
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; Projeto Casa Aberta • Etec Rodrigues de Abreu • 2º Desenvolvimento de Sistemas</p>
+      </footer>
+    </main>
 
 
 </body>

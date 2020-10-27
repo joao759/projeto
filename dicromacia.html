@@ -15,9 +15,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
-  <script src="javascript_Imagem.js"></script>
-  <title>Dicromacia · Daltonismo</title>
-  <link href="album.css" rel="stylesheet">
+  <script src="js_dicromacia.js"></script>
+  <title>Casa Aberta · Daltonismo</title>
+  <link href="css_dicromacia.css" rel="stylesheet">
   <link rel="shortcut icon" href="imagens/eye1.ico">
 </head>
 
@@ -42,13 +42,13 @@
             <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Tipos de daltonismo<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="dicromacia.html">Tipos de daltonismo<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="sobre.html">Nosso Projeto<span class="sr-only">(current)</span></a>
-        </li>
+          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="quiz.html">Teste<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="teste.html">Teste<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="feedback.html">Feedback<span class="sr-only">(current)</span></a>
@@ -106,20 +106,18 @@
 
   <div class="container marketing">
     <div class="row featurette">
-      <div class="col-md">
-    <h2 style="color:rgb(29, 28, 28) !important; margin-top: 3rem; margin-bottom: 5rem; text-align: center;" class="featurette-heading2">Sobre o daltonismo</h2>
-  </div>
-  </div>
+      <div  style="margin-top: 2rem;"class="col-md">
+        <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Dicromacia</h2>
+        <p id="txtP" class="lead p_color_dark txt">Dicromacia é o estado de ter dois tipos de receptores de cor
+          funcionais, chamados células cone, nos olhos. Os dicromatas podem combinar com qualquer cor que vejam com uma
+          mistura de não mais do que duas luzes espectrais puras.
+          A dicromacia em humanos é um defeito de visão de cores no qual um dos três mecanismos básicos de cor está
+          ausente ou não está funcionando. É hereditária e ligada ao sexo, afetando predominantemente os homens. A
+          dicromacia ocorre quando um dos pigmentos do cone está faltando e a cor é reduzida a duas dimensões.</p>
+      </div>
+    </div>
 
-    <div class="row featurette">
-      <div class="col-md">
-    <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Dicromacia</h2>
-    <p id="txtP" class="lead p_color_dark txt">Dicromacia é o estado de ter dois tipos de receptores de cor funcionais, chamados células cone, nos olhos.  Os dicromatas podem combinar com qualquer cor que vejam com uma mistura de não mais do que duas luzes espectrais puras.
-      A dicromacia em humanos é um defeito de visão de cores no qual um dos três mecanismos básicos de cor está ausente ou não está funcionando. É hereditária e ligada ao sexo, afetando predominantemente os homens. A dicromacia ocorre quando um dos pigmentos do cone está faltando e a cor é reduzida a duas dimensões.</p>
-  </div>
-  </div>
-    
-    <div style="margin-top: 2rem;"class="row featurette">
+    <div style="margin-top: 2rem;" class="row featurette">
       <div class="col-md-7">
         <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Protanopia</h2>
         <p id="txtD" style="margin-top: 2rem;" class="lead p_color_dark txt">
@@ -130,53 +128,60 @@
           recombinação dos genes localizados no cromossomo X e por isso ligado ao sexo.</p>
       </div>
       <div class="col-md-5">
-        <img id="image1" src="imagens/protanopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+        <img id="image1" src="imagens/protanopia_normal.jpg"
+          style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
           class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
           preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
       </div>
     </div>
 
-      <div style="margin-top: 5rem;" class="row featurette">
-        <div class="col-md-7">
-          <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Deuteranopia</h2>
-          <p id="txtT" style="margin-top: 2rem;" class="lead p_color_dark txt">
-            A deuteranopia ocorre quando os cones do tipo M não estão presentes na retina. Pessoas com
+    <div style="margin-top: 5rem;" class="row featurette">
+      <div class="col-md-7">
+        <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Deuteranopia</h2>
+        <p id="txtT" style="margin-top: 2rem;" class="lead p_color_dark txt">
+          A deuteranopia ocorre quando os cones do tipo M não estão presentes na retina. Pessoas com
           esta forma de daltonismo possuem dificuldade em distinguir o vermelho do verde, o roxo do
           azul, e alguns tons de cinza. Elas conseguem distinguir de dois a três tons de cores diferentes,
           enquanto alguém com visão normal enxerga sete tons diferentes. A deuteranopia também é congênita,
           sua característica é ligada ao sexo.</p>
-        </div>
-        <div class="col-md-5">
-          <img id="image2" src="imagens/deutoranopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
-            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
-        </div>
       </div>
+      <div class="col-md-5">
+        <img id="image2" src="imagens/deutoranopia_normal.jpg"
+          style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
+      </div>
+    </div>
 
-        <div style="margin-top: 5rem;" class="row featurette" >
-          <div class="col-md-7">
-            <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Tritanopia</h2>
-            <p style="margin-top: 2rem;" class="lead p_color_dark txt">
-              A tritanopia ocorre quando os cones do tipo S não estão presentes na retina. Pessoas com esta
+    <div style="margin-top: 5rem;" class="row featurette">
+      <div class="col-md-7">
+        <h2 style="color:rgb(29, 28, 28) !important;" class="featurette-heading">Tritanopia</h2>
+        <p style="margin-top: 2rem;" class="lead p_color_dark txt">
+          A tritanopia ocorre quando os cones do tipo S não estão presentes na retina. Pessoas com esta
           forma de daltonismo possuem dificuldade em distinguir o azul do verde, e o amarelo do
           violeta.
           Este tipo de daltonismo atinge cerca de 0,008% da população. Ela atinge tanto homens
           quanto mulheres, devido a tritanopia ocorrer em um cormossomo anomalo, que não pertence ao par sexual de
           cromossomos,
           o que a tona possível de se adquirir durante a vida, porém nestes casos ela pode ser reversível.</p>
-          </div>
-          <div class="col-md-5">
-            <img id="image3" src="imagens/tritanopia_normal.jpg" style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
-              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
-          </div>
+      </div>
+      <div class="col-md-5">
+        <img id="image3" src="imagens/tritanopia_normal.jpg"
+          style="margin-top:15px; border: 2px solid transparent; border-radius: 20px;"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          preserveAspectRatio="xMidYMid slice" focusable="false" role="img" />
+      </div>
 
-  </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
   </div>
   <div class="div_container">
     <footer class="container">
       <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2020 HJHJ Company, Inc</p>
+      <p>&copy; Projeto Casa Aberta • Etec Rodrigues de Abreu • 2º Desenvolvimento de Sistemas</p>
     </footer>
   </div>
 
