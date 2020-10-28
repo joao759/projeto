@@ -79,7 +79,7 @@ input {
     background: #fff;
     transition: 0.5s;
     text-align: center;
-    line-height: 43px;
+    line-height: 40px;
     font-size: 36px;
     box-shadow: 0 0 0 0px #313131;
 }
@@ -156,22 +156,27 @@ input:checked~.img {
 @media screen and (max-width: 768px) {
 
     .card {
-        width: 110%;
-        right: 5%;
-        border-radius: 0;
+        width: 100%;
     }
 
     input:checked~.toggle {
         box-shadow: 0 0 0 800px #313131;
         transform: rotate(225deg);
     }
+    input, .toggle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        outline: none;
+        z-index: 10;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1190px) {
     .card {
         width: 100%;
-        right: 0%;
-        border-radius: 0;
     }
 
     input:checked~.toggle {
